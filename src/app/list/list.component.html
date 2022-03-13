@@ -1,0 +1,10 @@
+<ul id="myUL">
+  <li
+    *ngFor="let todo of todos"
+    [class]="todo.isDone ? 'checked' : ''"
+    (click)="handleToggleTodo(todo.id)"
+  >
+    {{ todo.name }}
+    <span class="close" (click)="handleDeleteTodo(todo.id)">×</span>
+  </li>
+</ul>
